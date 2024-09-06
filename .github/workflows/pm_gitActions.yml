@@ -2,7 +2,9 @@ name: Automated API tests using Postman CLI
 
 on: 
   workflow_dispatch:
-  push:
+  pull_request:   # This replaces 'push' and will trigger the workflow when a PR is raised
+    branches:
+      - main      # Specify the branch that the PR should target
 
 jobs:
   automated-api-tests:
