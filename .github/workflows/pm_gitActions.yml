@@ -5,6 +5,10 @@ on:
   pull_request:   # This replaces 'push' and will trigger the workflow when a PR is raised
     branches:
       - main      # Specify the branch that the PR should target
+  push:
+   branches:
+      - main          # Specify the branch where pushes will trigger the workflow
+     
 
 jobs:
   automated-api-tests:
